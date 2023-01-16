@@ -22,5 +22,10 @@ namespace WorkoutCounter.Handler
             var counters = await _repository.GetCounters();
             return counters;
         }
+        public async Task<int> CreateCounter(Counter counter)
+        {
+            var newCounter = await _repository.AddCounter(counter);
+            return newCounter;
+        }
     }
 }
