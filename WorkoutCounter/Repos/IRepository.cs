@@ -6,5 +6,6 @@ namespace WorkoutCounter.Repos
     {
         Task<List<Counter>> GetCounters();
         Task<Counter> GetCounter(int id);
+        Task<int> AddCounter(Counter counter);
     }
 }

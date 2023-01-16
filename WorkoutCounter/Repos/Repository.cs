@@ -20,5 +20,11 @@ namespace WorkoutCounter.Repos
         {
             return await _context.Counters.FindAsync(id);
         }
+        public async Task<int> AddCounter(Counter counter)
+        {
+            _context.Counters.Add(counter);
+            await _context.SaveChangesAsync();
+            return counter.Id;
+        }
     }
 }
